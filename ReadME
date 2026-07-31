@@ -14,3 +14,6 @@ This repository contains the Java implementation for Practical 1. It demonstrate
    cd src
    javac *.java
    java Main
+
+lock 2 has been completed and it shows how it works and where it gets the deadlock towards the end of counter 
+lock 1 and the last lock then also edit the main so that we can all use 1 main.cpp
