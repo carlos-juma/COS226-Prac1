@@ -1,19 +1,16 @@
-# COS 226 - Practical 1: Mutual Exclusion Algorithms
+#COS 226 - Practical 1: Mutual Exclusion Algorithms
 
-## Group Members
+##Group Members
 1. **u25657764**  
 2. **u24604187**  
 3. **u22602047** 
 
-## Overview
+##Overview
 This repository contains the Java implementation for Practical 1. It demonstrates the behavior of three classical software mutual exclusion algorithms using two concurrent threads simulating a shared memory environment.
 
-## How to Run
+##How to Run
 1. Navigate to the `src` directory:
    ```bash
    cd src
    javac *.java
-   java Main
-
-lock 2 has been completed and it shows how it works and where it gets the deadlock towards the end of counter 
-lock 1 and the last lock then also edit the main so that we can all use 1 main.cpp
+   java Main```
