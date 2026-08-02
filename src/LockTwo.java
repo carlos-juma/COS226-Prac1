@@ -1,16 +1,17 @@
-// ==========================================
-// [name]
-// ==========================================
-public class LockTwo implements ILock {
-    //Declare shared state variables here (e.g., victim)
+public class LockTwo implements ILock{
+    private volatile int victim;
 
-    @Override
-    public void lock(int threadId) {
-        //Implement the locking logic for LockTwo
+    public LockTwo() {
+        victim = -1;
     }
 
-    @Override
-    public void unlock(int threadId) {
-        //Implement the unlocking logic for LockTwo (often empty)
+    public void lock(int i) {
+        victim = i;
+        while (victim == i) {
+            Thread.yield();
+        }
+    }
+
+    public void unlock(int i) {
     }
 }
