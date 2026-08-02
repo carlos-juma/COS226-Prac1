@@ -6,11 +6,14 @@ public class Main {
     
     // we'll swap out this instantiation during the demo to show the different locks
     private static ILock mutex = new PetersonLock(); 
+    //////////////////////////////////////////////////
+    
     private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
        logger.info("Starting simulation");
 
-        // FEATURE: Demonstrate using exactly two concurrent threads
+        // two concurrent threads
         Thread t0 = new Thread(() -> criticalSectionTask(0));
         Thread t1 = new Thread(() -> criticalSectionTask(1));
 

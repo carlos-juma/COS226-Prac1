@@ -4,13 +4,25 @@
 public class LockOne implements ILock {
     //  Declare shared state variables here (e.g., flag array)
 
+    private boolean[] flag = new boolean[2];
+
+
     @Override
     public void lock(int threadId) {
-        //Implement the locking logic for LockOne
+
+        int i = threadId;
+        int j = 1 - i;
+
+        flag[i] = true;
+
+        while(flag[j]){
+         // wait
+        }
     }
 
     @Override
     public void unlock(int threadId) {
-        //Implement the unlocking logic for LockOne
+        int i = threadId;
+        flag[i] = false;
     }
 }
